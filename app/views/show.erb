@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="team">
+      <h1><%= @team_name %></h1>
+      <h1>Team Motto: <%= @team_motto %></h1>
+    </div><br>
+    <% @team_members.each do |element| %>
+      <div class="member">
+        <h1>Hero Name: <%= element[:name] %></h1>
+        <p>Hero Power: <%= element[:power] %></p>
+        <p>Hero Biography: <%= element[:bio] %></p>
+      </div><br>
+    <% end %>
+  </body>
+</html>
